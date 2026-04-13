@@ -51,7 +51,7 @@ export default function HomeView() {
         <img
           src="/images/logo.png"
           alt="FEFIE Logo"
-          className="w-48 h-48 md:w-64 md:h-64 object-contain doodle-border hand-drawn-shadow bg-white p-4"
+          className="w-64 h-64 md:w-96 md:h-96 object-contain doodle-border hand-drawn-shadow bg-white p-2"
           referrerPolicy="no-referrer"
         />
         {/* Decorative dots around logo */}
