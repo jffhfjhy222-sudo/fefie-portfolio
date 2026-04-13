@@ -20,21 +20,22 @@ export default function CVView() {
           <div className="absolute -bottom-2 -right-2 w-full h-4 bg-pastel-purple/60 -z-10 rounded-full rotate-1" />
         </div>
         
-        <div className="w-full aspect-[1/1.4] bg-white doodle-border hand-drawn-shadow overflow-hidden relative group rotate-1">
-          {/* Placeholder for PDF embed */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-pastel-blue/10 font-body">
-            <FileText size={80} className="text-pastel-blue-dark mb-4 floating" />
-            <p className="text-slate-400 font-bold text-xl">PDF Preview Placeholder</p>
-            <p className="text-slate-300 text-sm">(Embed your CV PDF here)</p>
-          </div>
+        <div className="w-full h-[600px] md:h-[800px] bg-white doodle-border hand-drawn-shadow overflow-hidden relative rotate-1">
+          <iframe
+            src={t.pdfUrl}
+            className="w-full h-full border-none rounded-lg"
+            title="CV PDF"
+          />
         </div>
 
         <motion.a
           href={t.pdfUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           download
           whileHover={{ scale: 1.1, rotate: -2 }}
           whileTap={{ scale: 0.9 }}
-          className="inline-flex items-center gap-3 px-10 py-5 bg-pastel-pink-dark text-white rounded-full font-bold shadow-lg shadow-pastel-pink/30 hover:bg-pink-400 transition-all doodle-border border-white"
+          className="inline-flex items-center gap-3 px-10 py-5 bg-pastel-pink-dark text-white rounded-full font-bold shadow-lg shadow-pastel-pink/30 hover:bg-pink-400 transition-all doodle-border border-white font-heading"
         >
           <Download size={24} />
           {t.downloadLabel}
